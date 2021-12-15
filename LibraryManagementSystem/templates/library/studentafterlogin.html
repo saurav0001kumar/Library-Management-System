@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <title>Welcome Student</title>
+
+  <style media="screen">
+    .btn-circle.btn-xl {
+      width: 70px;
+      height: 70px;
+      padding: 10px 16px;
+      border-radius: 35px;
+      font-size: 24px;
+      line-height: 1.33;
+    }
+
+    .btn-circle {
+      width: 30px;
+      height: 30px;
+      padding: 6px 0px;
+      border-radius: 15px;
+      text-align: center;
+      font-size: 12px;
+      line-height: 1.42857;
+    }
+
+    .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    .jumbotron h1 {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  {% include "library/navbarstudent.html" %}
+  <br>
+  <br>
+  <center>
+    <h3 style=" margin-bottom: 0px;" class='alert alert-success'>Welcome to Library Student's Panel !</h3>
+  </center>
+  <div class="jumbotron" style="    margin-bottom: 0px;">
+    <h1 class="display-4">Hello {{user.first_name}} {{user.last_name}} !</h1>
+    <p class="lead">You are logged in as "{{user.username}}"
+    </p>
+    <hr class="my-4">
+    <p>Options Available For You</p>
+    <div class="options" style="text-align:center">
+      <a href="viewissuedbookbystudent" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">View your
+        Issued Books</a><br><br>
+    </div>
+
+  </div>
+
+  {% include "library/footer.html" %}
+</body>
+
+</html>
